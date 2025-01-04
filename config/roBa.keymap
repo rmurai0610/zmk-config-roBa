@@ -7,6 +7,9 @@
 #define SCROLL 5
 #define NUM 6
 
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -33,6 +36,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -46,7 +55,7 @@
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 ESC  &lt 1 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB      &mt RIGHT_SHIFT ENTER                               &lt 5 DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
