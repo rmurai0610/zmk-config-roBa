@@ -55,10 +55,19 @@
 &kp Q             &kp W         &kp E         &kp R      &kp T                                                     &kp Y                &kp U    &lt 5 I    &kp O      &kp P
 &kp A             &kp S         &kp D         &kp F      &kp G        &mkp MCLK               &kt GRAVE            &kp H                &kp J    &kp K      &kp L      &kp BACKSPACE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp COMMA               &mt RIGHT_SHIFT DOT  &kp N                &lt 5 M  &mkp LCLK  &mkp RCLK  &lt 3 MINUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 ESC  &lt 1 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB        &mt RIGHT_ALT SPACE                                 &lt 5 QUESTION
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 ESC  &lt 2 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB        &mt RIGHT_ALT SPACE                                 &lt 5 QUESTION
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        NUM {
+            bindings = <
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR        &kp PERCENT                                                     &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH        &kp BACKSLASH  &kp PIPE   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &kp COLON             &trans
+&trans           &trans         &kp COMMA  &kp DOT           &kp EQUAL          &kp PLUS                     &kp MINUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION
+&trans           &trans         &trans     &trans            &trans             &trans                       &trans          &trans                                                                    &trans
+            >;
         };
 
         FUNCTION {
@@ -70,15 +79,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-        };
-
-        NUM {
-            bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR        &kp PERCENT                                                     &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH        &kp BACKSLASH  &kp PIPE   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &kp COLON             &trans
-&trans           &trans         &kp COMMA  &kp DOT           &kp EQUAL          &kp PLUS                     &kp MINUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION
-&trans           &trans         &trans     &trans            &trans             &trans                       &trans          &trans                                                                    &trans
-            >;
         };
 
         ARROW {
