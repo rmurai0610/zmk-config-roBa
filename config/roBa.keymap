@@ -66,16 +66,16 @@
 &kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR        &kp PERCENT                                                     &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH        &kp BACKSLASH  &kp PIPE   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &kp COLON             &trans
 &trans           &trans         &kp COMMA  &kp DOT           &kp EQUAL          &kp PLUS                     &kp MINUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN  &kp GREATER_THAN      &kp QUESTION
-&trans           &trans         &trans     &trans            &trans             &trans                       &trans          &trans                                                                    &trans
+&trans           &trans         &trans     &trans            &trans             &trans                       &trans          &trans                                                                    &kp QUESTION
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans     &kp F7  &kp F8  &kp LEFT_BRACKET      &kp RIGHT_BRACKET                                           &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp F5
-&trans     &kp F4  &kp F5  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &kp F13           &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &trans
-&kp MINUS  &kp F1  &kp F2  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN      &kp GREATER_THAN  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp F11
-&trans     &trans  &trans  &trans                &trans                 &trans             &trans            &kp RIGHT_SHIFT                                            &kp F12
+&trans  &kp SLASH  &kp ASTERISK  &kp CARET  &kp PERCENT                      &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans  &kp MINUS  &kp PLUS      &kp EQUAL  &trans       &trans      &trans  &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD    &trans
+&trans  &trans     &trans        &trans     &trans       &trans      &trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+&trans  &trans     &trans        &trans     &trans       &trans      &trans  &kp RIGHT_SHIFT                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
