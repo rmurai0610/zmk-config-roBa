@@ -55,7 +55,7 @@
 &kp Q             &kp W         &kp E         &kp R      &kp T                                               &kp Y                &kp U    &lt 5 I    &kp O      &kp P
 &kp A             &kp S         &kp D         &kp F      &kp G        &mkp MCLK               &kt GRAVE      &kp H                &kp J    &kp K      &kp L      &kp BACKSPACE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp COMMA               &kp DOT        &kp N                &lt 5 M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 ESC  &lt 1 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB  &mt RIGHT_ALT SPACE                                 &lt 5 A
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 ESC  &lt 1 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB  &mt RIGHT_ALT SPACE                                 &lt 2 A
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -63,10 +63,10 @@
 
         FUNCTION {
             bindings = <
-&trans     &kp N7        &kp N8        &kp N9        &kp N0                          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp F4  &kp F5
-&trans     &kp NUMBER_4  &kp N5        &kp N6        &kp MINUS  &trans      &kp F13  &kp SEMICOLON     &kp SINGLE_QUOTE   &kp SLASH      &kp F9  &kp F10
-&kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans      &trans   &trans            &trans             &trans         &trans  &kp F11
-&trans     &trans        &trans        &trans        &trans     &trans      &trans   &kp RIGHT_SHIFT                                             &kp F12
+&trans     &kp N7        &kp N8        &kp N9        &kp N0                          &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp F5
+&trans     &kp NUMBER_4  &kp N5        &kp N6        &kp MINUS  &trans      &kp F13  &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp F10
+&kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans      &trans   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &kp F11
+&trans     &trans        &trans        &trans        &trans     &trans      &trans   &kp RIGHT_SHIFT                                            &kp F12
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
