@@ -28,6 +28,17 @@
     };
 
     behaviors {
+
+        hm {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            require-prior-idle-ms = <150>
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -52,8 +63,8 @@
         default_layer {
             bindings = <
 &lt 3 Q             &kp W             &kp E           &kp R           &kp T                                               &kp Y        &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &mt LEFT_SHIFT S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G        &mkp MCLK               &kp GRAVE      &kp H        &kp J    &kp K      &kp L      &kp BACKSPACE
-&mt LEFT_SHIFT Z    &kp X             &kp C           &kp V           &kp B        &kp MINUS               &kp RSHIFT     &kp N        &lt 1 M  &mkp LCLK  &mkp RCLK  &lt 2 PERIOD
+&hm LEFT_CONTROL A  &hm LEFT_SHIFT S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G        &mkp MCLK               &kp GRAVE      &kp H        &kp J    &kp K      &kp L      &kp BACKSPACE
+&hm LEFT_SHIFT Z    &kp X             &kp C           &kp V           &kp B        &kp MINUS               &kp RSHIFT     &kp N        &lt 1 M  &mkp LCLK  &mkp RCLK  &lt 2 PERIOD
 &kp LCTRL           &kp LEFT_ALT      &kp LEFT_WIN    &lt 2 ESC       &lt 1 SPACE  &mt LEFT_GUI ENTER      &mt RCTRL TAB  &lt 2 SPACE                                 &lt 1 COMMA
             >;
 
