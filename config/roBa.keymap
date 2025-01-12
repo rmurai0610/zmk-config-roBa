@@ -33,6 +33,7 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0_TAP";
         };
+
         l0_press: layer_0_press {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -40,10 +41,10 @@
             label = "TO_LAYER_0_PRESS";
         };
 
-        l0_tog: layer_0_tog {
+        l0_mo: layer_0_mo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &tog MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &macro_press &mo MACRO_PLACEHOLDER &macro_pause_for_release &macro_release &mo MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0_TOG";
         };
     };
@@ -108,7 +109,7 @@
             quick-tap-ms = <QUICK_TAP_MS>;
 
             flavor = "balanced";
-            bindings = <&l0_tog>, <&l0_tap>;
+            bindings = <&l0_mo>, <&l0_tap>;
         };
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
