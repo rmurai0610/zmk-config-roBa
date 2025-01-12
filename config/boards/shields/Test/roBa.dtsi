@@ -6,7 +6,6 @@
         // zmk,kscan = &kscan0;
         // zmk,matrix_transform = &physical_layout0;
         zmk,physical-layout = &physical_layout0;
-
     };
 
     physical_layout0: physical_layout_0 {
