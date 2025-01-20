@@ -39,12 +39,11 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1>,
-                <&macro_press>,
-                <&kp MACRO_PLACEHOLDER>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp MACRO_PLACEHOLDER &to 0>;
-
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&to 0>;
             label = "TO_LAYER_0_PRESS";
         };
 
@@ -53,13 +52,10 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1>,
-                <&macro_press>,
-                <&mo MACRO_PLACEHOLDER>,
+                <&to MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 0 &to 0>;
-
-            label = "TO_LAYER_0_TOG";
+                <&to 0>;
+            label = "TO_LAYER_0_MO";
         };
 
         trans_0: new_macro {
@@ -139,7 +135,6 @@
 
             tap-ms = <20>;
         };
-
     };
 
     keymap {
@@ -158,10 +153,10 @@
 
         NUMBERS {
             bindings = <
-&kp LBKT   &kp N7  &kp N8  &kp N9   &kp RBKT                           &trans  &trans  &trans     &trans   &trans
-&kp SEMI   &kp N4  &kp N5  &kp N6   &kp EQUAL  &kp K_MUTE      &trans  &trans  &trans  &trans     &trans   &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH   &trans          &trans  &trans  &trans  &kp COMMA  &kp DOT  &trans
-&trans     &trans  &trans  &kp DOT  &kp N0     &kp MINUS       &trans  &trans                              &trans
+&kp LBKT   &kp N7  &kp N8  &kp N9   &kp RBKT                           &trans  &trans  &trans  &trans  &kp LS(LEFT_GUI)
+&kp SEMI   &kp N4  &kp N5  &kp N6   &kp EQUAL  &kp K_MUTE      &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &kp DOT  &kp N0     &kp MINUS       &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -169,10 +164,10 @@
 
         SYMBOLS {
             bindings = <
-&kp LEFT_BRACE  &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                                &trans  &trans  &trans         &trans            &trans
-&kp COLON       &kp DOLLAR       &kp PERCENT  &kp CARET             &kp PLUS               &kp K_MUTE      &trans  &trans  &trans  &trans         &trans            &trans
-&kp TILDE       &kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp PIPE               &trans          &trans  &trans  &trans  &kp LESS_THAN  &kp GREATER_THAN  &trans
-&trans          &trans           &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER       &trans  &trans                                           &trans
+&kp LEFT_BRACE  &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                                &trans  &trans  &trans  &trans  &trans
+&kp COLON       &kp DOLLAR       &kp PERCENT  &kp CARET             &kp PLUS               &kp K_MUTE      &trans  &trans  &trans  &trans  &trans  &trans
+&kp TILDE       &kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp PIPE               &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER       &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -191,7 +186,7 @@
 
         NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                     &kp LG(C)       &kp LG(V)       &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans                                     &kp LG(C)       &kp LG(V)       &trans        &trans           &kp LS(LG(NUMBER_5))
 &trans  &trans  &trans  &trans  &trans  &kp K_MUTE      &kp LG(LS(EQUAL))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &kp LG(LS(MINUS))  &mkp MB4        &kp PAGE_DOWN   &kp PAGE_UP   &mkp MB5         &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans                                                         &trans
